@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Adopt and care for your virtual pet! Feed, play, and nurture your digital companion in this fun interactive pet care game."
+    />
+    <meta
+      name="keywords"
+      content="virtual pet, pet game, digital pet, online pet, pet simulator, pet care game"
+    />
+    <meta name="author" content="Virtual Pet Care" />
+    <meta name="robots" content="index, follow" />
+    <meta
+      property="og:title"
+      content="Virtual Pet Care - Your Digital Companion"
+    />
+    <meta
+      property="og:description"
+      content="Adopt and care for your virtual pet in this fun interactive game!"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://yourwebsite.com" />
+    <meta property="og:image" content="https://i.imgur.com/yoIYEUA.jpeg" />
+    <meta property="og:site_name" content="Virtual Pet Care" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta
+      name="twitter:title"
+      content="Virtual Pet Care - Your Digital Companion"
+    />
+    <meta
+      name="twitter:description"
+      content="Adopt and care for your virtual pet in this fun interactive game!"
+    />
+    <meta name="twitter:image" content="https://i.imgur.com/yoIYEUA.jpeg" />
+    <link rel="canonical" href="https://yourwebsite.com" />
+    <link rel="icon" href="./assets/favicon.png" type="image/x-icon" />
+    <title>Virtual Pet Care - Your Digital Companion</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&family=Fredoka+One&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="theme-switcher">
+      <button id="theme-light" class="theme-btn">
+        <i class="fas fa-sun"></i>
+      </button>
+      <button id="theme-dark" class="theme-btn">
+        <i class="fas fa-moon"></i>
+      </button>
+      <button id="theme-system" class="theme-btn">
+        <i class="fas fa-desktop"></i>
+      </button>
+    </div>
+
+    <div class="container">
+      <header class="app-header">
+        <h1><i class="fas fa-paw"></i> Virtual Pet</h1>
+        <div class="pet-info-card">
+          <div class="pet-name" id="pet-name">Your Pet</div>
+          <div class="pet-stats">
+            <div class="stat-item">
+              <span class="stat-icon"><i class="fas fa-utensils"></i></span>
+              <div class="stat-bar-container">
+                <div id="hunger-bar" class="stat-bar-fill"></div>
+              </div>
+            </div>
+            <div class="stat-item">
+              <span class="stat-icon"><i class="fas fa-laugh-beam"></i></span>
+              <div class="stat-bar-container">
+                <div id="happiness-bar" class="stat-bar-fill"></div>
+              </div>
+            </div>
+            <div class="stat-item">
+              <span class="stat-icon"><i class="fas fa-bolt"></i></span>
+              <div class="stat-bar-container">
+                <div id="energy-bar" class="stat-bar-fill"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <main class="app-main">
+        <div class="main-content">
+          <div class="pet-display">
+            <img
+              id="pet-image"
+              src="assets/pet_normal.gif"
+              alt="Your Virtual Pet"
+              class="pet-image"
+            />
+            <div class="pet-mood" id="pet-mood"></div>
+          </div>
+
+          <div class="action-buttons">
+            <button id="feed-btn" class="action-btn btn-pink">
+              <i class="fas fa-utensils"></i> Feed
+            </button>
+            <button id="play-btn" class="action-btn btn-blue">
+              <i class="fas fa-gamepad"></i> Play
+            </button>
+            <button id="sleep-btn" class="action-btn btn-purple">
+              <i class="fas fa-moon"></i> Sleep
+            </button>
+            <button id="spin-btn" class="action-btn btn-yellow">
+              <i class="fas fa-sync-alt"></i> Spin
+            </button>
+            <button id="clean-btn" class="action-btn btn-green">
+              <i class="fas fa-bath"></i> Clean
+            </button>
+          </div>
+
+          <div class="inventory-section">
+            <h2><i class="fas fa-backpack"></i> Inventory</h2>
+            <div class="inventory-items">
+              <div class="inventory-item" data-type="food">
+                <i class="fas fa-apple-alt item-icon"></i>
+                <span class="item-name">Food</span>
+                <span class="item-count">5</span>
+              </div>
+              <div class="inventory-item" data-type="toy">
+                <i class="fas fa-baseball-ball item-icon"></i>
+                <span class="item-name">Toy</span>
+                <span class="item-count">3</span>
+              </div>
+              <div class="inventory-item" data-type="medicine">
+                <i class="fas fa-pills item-icon"></i>
+                <span class="item-name">Medicine</span>
+                <span class="item-count">2</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="pet-log-container">
+          <div class="pet-log">
+            <h2><i class="fas fa-book"></i> <Pet></Pet> Log</h2>
+            <div id="log-messages" class="log-messages"></div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <div id="toast" class="toast"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
